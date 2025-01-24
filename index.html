@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radiance Salon</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Georgia', serif;
+      color: #444;
+    }
+
+    a {
+      text-decoration: none;
+      color: #ff6f61;
+    }
+
+    a:hover {
+      color: #ff3b2f;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header .logo img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      font-weight: bold;
+      color: #333;
+    }
+
+    nav ul li a:hover {
+      color: #ff6f61;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      text-align: center;
+      background: url('https://via.placeholder.com/1200x600?text=Salon+Service') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .hero-text {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .cta-button {
+      background-color: #ff6f61;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .cta-button:hover {
+      background-color: #ff3b2f;
+    }
+
+    /* Highlight Services */
+    .highlight-services {
+      padding: 60px 10%;
+      text-align: center;
+      background-color: #f8f8f8;
+    }
+
+    .services-grid {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    .service {
+      width: 30%;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .service img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      padding: 60px 10%;
+      text-align: center;
+    }
+
+    .testimonial {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      margin: 20px 0;
+    }
+
+    .testimonial img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    /* Portfolio/Gallery */
+    .portfolio {
+      padding: 60px 10%;
+      text-align: center;
+      background-color: #f8f8f8;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* About Page */
+    .about {
+      padding: 60px 10%;
+      text-align: center;
+    }
+
+    .team {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    .team-member {
+      width: 30%;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .team-member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    /* Contact Page */
+    .contact {
+      padding: 60px 10%;
+      text-align: center;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact-form button {
+      background-color: #ff6f61;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .contact-form button:hover {
+      background-color: #ff3b2f;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="https://via.placeholder.com/150x50?text=Radiance+Logo" alt="Radiance Salon Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Experience the Art of Beauty at Radiance Salon</h1>
+      <a href="#contact" class="cta-button">Book an Appointment</a>
+    </div>
+  </section>
+
+  <!-- Highlight Services -->
+  <section class="highlight-services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service">
+        <img src="https://via.placeholder.com/100x100?text=Haircut" alt="Haircut">
+        <h3>Haircuts</h3>
+        <p>Transform your look with our expert stylists.</p>
+        <p><strong>Starting at $50</strong></p>
+      </div>
+      <div class="service">
+        <img src="https://via.placeholder.com/100x100?text=Nail+Art" alt="Nail Art">
+        <h3>Nail Art</h3>
+        <p>Get creative and stylish nail designs.</p>
+        <p><strong>Starting at $30</strong></p>
+      </div>
+      <div class="service">
+        <img src="https://via.placeholder.com/100x100?text=Facial" alt="Facials">
+        <h3>Facials</h3>
+        <p>Rejuvenate your skin with our luxury facials.</p>
+        <p><strong>Starting at $80</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial">
+      <img src="https://via.placeholder.com/50x50?text=Sarah+L." alt="Sarah L.">
+      <p>"Amazing experience! My hair has never looked better. – Sarah L."</p>
+    </div>
+    <div class="testimonial">
+      <img src="https://via.placeholder.com/50x50?text=John+D." alt="John D.">
+      <p>"The best salon in town! Highly recommend. – John D."</p>
+    </div>
+  </section>
+
+  <!-- Portfolio/Gallery -->
+  <section class="portfolio">
+    <h2>Our Portfolio</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x200?text=Hair+Styling" alt="Hair Styling">
+      <img src="https://via.placeholder.com/300x200?text=Nail+Art" alt="Nail Art">
+      <img src="https://via.placeholder.com/300x200?text=Facial+Treatment" alt="Facial Treatment">
+    </div>
+  </section>
+
+  <!-- About Page -->
+  <section class="about">
+    <h2>About Us</h2>
+    <p>Welcome to Radiance Salon, where beauty meets elegance. Our mission is to provide exceptional services in a relaxing environment.</p>
+    <div class="team">
+      <div class="team-member">
+        <img src="https://via.placeholder.com/100x100?text=Stylist+1" alt="Stylist 1">
+        <h3>Jane Doe</h3>
+        <p>Master Stylist</p>
+      </div>
+      <div class="team-member">
+        <img src="https://via.placeholder.com/100x100?text=Stylist+2" alt="Stylist 2">
+        <h3>John Smith</h3>
+        <p>Nail Artist</p>
+      </div>
+      <div class="team-member">
+        <img src="https://via.placeholder.com/100x100?text=Stylist+3" alt="Stylist 3">
+        <h3>Emily Johnson</h3>
+        <p>Skincare Specialist</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Page -->
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-form">
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Radiance Salon. All rights reserved.</p>
+  </footer>
+</body>
+</html>
